@@ -1,0 +1,148 @@
+:root {
+    --bg-dark: #0f172a;
+    --card-bg: #1e293b;
+    --accent: #10b981; /* Emerald Green */
+    --text-light: #f8fafc;
+    --text-dim: #94a3b8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- ENTRY ANIMATIONS --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-element {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Header */
+header {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+/* Hero */
+.hero {
+    padding: 100px 0;
+    text-align: center;
+    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('hero-bg.jpg') center/cover;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--accent);
+    color: var(--bg-dark);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.items {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.item-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px; 
+    transition: transform 0.3s ease;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+    border: 1px solid var(--accent);
+}
+
+.item-img {
+    height: 200px;
+    background: #334155; 
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    padding: 60px 0;
+    background: #020617;
+    text-align: center;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.credit {
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+}
+
+.maps-link {
+    text-decoration: underline;
+    color: rgb(108, 108, 182);
+
+}
+
+@media (max-width: 768px) {
+    .hero h2 { font-size: 2rem; }
+}
